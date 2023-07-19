@@ -7,9 +7,15 @@ html {
     box-sizing: inherit;
 }
 
+h1,
+h5 {
+    margin-block: 0;
+}
+
 body {
     height: 100vh;
     min-width: 100vw;
+    margin: 0;
 }
 
 button {
@@ -26,7 +32,8 @@ button {
 
 button:hover{
     cursor: pointer;
-    background-color: rgba(red, green, blue, 0.3);
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .container {
@@ -36,15 +43,17 @@ button:hover{
     border-radius: 20px;
     overflow: hidden;
     background-color: #767676;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; */
+    display: grid;
     color: #fff;
 }
 
 .container .content {
     width: 100%;
     display: flex;
+    margin-top: 50px;
 }
 
 .container .introduce {
@@ -100,7 +109,7 @@ button:hover{
 
 .introduce .place {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 1.1;
@@ -110,7 +119,7 @@ button:hover{
 
 .introduce .describe {
     font-size: 1rem;
-    margin: 0;
+    margin-top: 0;
     font-weight: 300;
 }
 
@@ -129,4 +138,17 @@ button:hover{
 
 .thumbnail-list .wrapper {
     position: relative;
+    z-index: 10;
+    height: 300px;
+}
+
+.thumbnail-list .wrapper .thumbnail {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.75s cubic-bezier(0.6, 0.1, 0.3, 1);
+    transform: translateX(calc(var(--idx) * 230px));
+
 }

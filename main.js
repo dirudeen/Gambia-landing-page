@@ -80,3 +80,19 @@ for (let i = 0; i < data.length; i++) {
 introduce.children[0].classList.add("active")
 ordinalNumber.children[0].classList.add("active")
 
+
+
+const thumbnailListWraapper = document.querySelector(`.thumbnail-list .wrapper`);
+
+thumbnailListWraapper.innerHTML += `
+ <div class="thumbnail zoom">
+    <img src="${data[0].img}" alt="">
+ </div>`;
+
+for (let i = 1; i < data.length; i += 1) {
+    thumbnailListWraapper.innerHTML += `
+ <div class="thumbnail zoom" style="--idx: ${i - 1}">
+    <img src="${data[i].img}" alt="">
+ </div>`;
+    
+}
