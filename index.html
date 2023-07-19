@@ -9,21 +9,44 @@
     <link rel="shortcut icon" href="favicon.icon" type="image/x-icon" />
     <!-- StyleSheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- navigation begin -->
-    <header class="header">
-      <nav></nav>
-    </header>
-    <!-- navigation end -->
-
-    <main class="main-container">
-      <div class="image-container">
-        <img class="images" src="/images/senegambia.jpg" alt="senegambia" />
-        <img class="images" src="/images/serekunda.jpg" alt="serekunda" />
-        <img class="images" src="/images/soma.jpg" alt="soma" />
-        <img class="images" src="/images/istockphoto-488268344-1024x1024.jpg" alt="banjul" />
+    <div class="container">
+      <div class="content">
+        <div class="introduce">
+          <div class="wrapper">
+            <span>
+              <h5 class="country" style="--idx: 0"></h5>
+            </span>
+            <span>
+              <h1 class="place" style="--idx: 1"></h1>
+            </span>
+            <span>
+              <p class="describe" style="--idx: 2"></p>
+            </span>
+            <span>
+              <button class="discover-button" style="--idx: 3">Discover Now</button>
+            </span>
+          </div>
+        </div>
+        <div class="thumbnail-list">
+          <div class="wrapper"></div>
+        </div>
+    
+        <div class="navigation">
+          <button class="next-button"></button>
+          <span class="line"></span>
+          <span class="ordinal-number"></span>
+        </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>

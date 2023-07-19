@@ -8,7 +8,125 @@ html {
 }
 
 body {
+    height: 100vh;
+    min-width: 100vw;
+}
+
+button {
+    font-family: 'Rubik', sans-serif;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 50px;
+    transition: 0.5s ease;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(red, green, blue, 0.3);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #767676;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.container .content {
+    width: 100%;
+    display: flex;
+}
+
+.container .introduce {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    z-index: 20;
+}
+
+.introduce .wrapper {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 0 25px 0 50px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.introduce .wrapper span {
+    overflow: hidden;
+}
+
+.introduce .wrapper span > * {
+    transition: 0.5s ease;
+    opacity: 0;
+    transform: translateY(300px);
+    transition-delay: calc((3 - var(--idx)) * 0.1s);
+
+}
+
+.introduce .wrapper.active {
+    pointer-events: all;
+}
+
+
+.introduce .wrapper.active span > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc((3 - var(--idx) * 0.1s));
+}
+
+.introduce:not(.place) {
+    font-family: "Rubik", sans-serif;
+}
+
+.introduce .country {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.introduce .place {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.introduce .describe {
+    font-size: 1rem;
     margin: 0;
-    padding: 0;
-    background-color: black;
+    font-weight: 300;
+}
+
+.introduce .discover-button {
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.content .thumbnail-list {
+    position: relative;
+    height: 300px;
+    flex: 1;    
+}
+
+.thumbnail-list .wrapper {
+    position: relative;
 }
