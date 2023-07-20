@@ -38,14 +38,13 @@ button:hover{
 
 .container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 1280px;
+    height: 720px;
+    /* width: 100%;
+    height: 100%; */
     border-radius: 20px;
     overflow: hidden;
     background-color: #767676;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
     display: grid;
     color: #fff;
 }
@@ -150,5 +149,67 @@ button:hover{
     overflow: hidden;
     transition: 0.75s cubic-bezier(0.6, 0.1, 0.3, 1);
     transform: translateX(calc(var(--idx) * 230px));
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.4);
+}
 
+.thumbnail-list .wrapper .thumbnail.zoom {
+    width: 1280px;
+    height: 720px;
+    /* width: 100%;
+    height: 100%; */
+    transform: translate(-512px, -270px);
+    filter: brightness(40%);
+    box-shadow: none;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+
+.container .navigation {
+    margin-inline-start: 40%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 50px 50px 0;
+    z-index: 20;
+    overflow-y: hidden;
+}
+
+.navigation .next-button {
+    width: 180px;
+    border-radius: 50px;
+}
+
+.navigation .line {
+    flex: 1;
+    height: 2px;
+    background-color: #fff;
+
+}
+
+.navigation .ordinal-number {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    
+}
+
+.ordinal-number h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1;
+    position: absolute;
+    transform: translateY(200%);
+    transition: 0.5s ease;
+}
+
+.ordinal-number h2.active {
+    transform: unset;
 }
