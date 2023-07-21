@@ -38,11 +38,11 @@ button:hover{
 
 .container {
     position: relative;
-    width: 1280px;
-    height: 720px;
-    /* width: 100%;
-    height: 100%; */
-    border-radius: 20px;
+    /* width: 1280px;
+    height: 720px; */
+    width: inherit;
+    height: inherit;
+    /* border-radius: 20px; */
     overflow: hidden;
     background-color: #767676;
     display: grid;
@@ -57,12 +57,14 @@ button:hover{
 
 .container .introduce {
     position: relative;
-    width: 40%;
+    /* width: 40%; */
+    flex: 1;
     height: 100%;
     z-index: 20;
 }
 
 .introduce .wrapper {
+    
     position: absolute; 
     bottom: 0;
     left: 0;
@@ -82,10 +84,10 @@ button:hover{
     transition: 0.5s ease;
     opacity: 0;
     transform: translateY(300px);
-    transition-delay: calc((3 - var(--idx)) * 0.1s);
+    transition-delay: calc((3 - var(--idx)) * 0.1s); 
 
 }
-
+ 
 .introduce .wrapper.active {
     pointer-events: all;
 }
@@ -121,7 +123,6 @@ button:hover{
     margin-top: 0;
     font-weight: 300;
 }
-
 .introduce .discover-button {
     width: 250px;
     height: 50px;
@@ -129,10 +130,11 @@ button:hover{
     margin-top: 20px;
 }
 
+
 .content .thumbnail-list {
     position: relative;
     height: 300px;
-    flex: 1;    
+    flex: 1.5;    
 }
 
 .thumbnail-list .wrapper {
@@ -153,11 +155,10 @@ button:hover{
 }
 
 .thumbnail-list .wrapper .thumbnail.zoom {
-    width: 1280px;
-    height: 720px;
-    /* width: 100%;
-    height: 100%; */
-    transform: translate(-512px, -270px);
+    width: 170%;
+    height: 210%;
+    /* transform: translate(-512px, -270px); */
+    transform: translate(-550px, -50px);
     filter: brightness(40%);
     box-shadow: none;
 }
@@ -175,7 +176,7 @@ button:hover{
     gap: 20px;
     padding: 50px 50px 50px 0;
     z-index: 20;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .navigation .next-button {
@@ -189,6 +190,7 @@ button:hover{
     background-color: #fff;
 
 }
+
 
 .navigation .ordinal-number {
     position: relative;
@@ -206,7 +208,7 @@ button:hover{
     font-weight: 400;
     line-height: 1;
     position: absolute;
-    transform: translateY(200%);
+    transform: translateY(600%);
     transition: 0.5s ease;
 }
 

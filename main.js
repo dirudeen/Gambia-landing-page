@@ -1,7 +1,7 @@
 const data = [
     {
         img: "./images/senegambia.jpg",
-        country: 'Senegambia - The Gambia',
+        country: 'Kanifing Central - The Gambia',
         place: "Senegambia",
         discribe:
         `orem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -13,7 +13,7 @@ const data = [
     
     {
         img: "./images/soma.jpg",
-        country: 'Soma - The Gambia',
+        country: 'URR - The Gambia',
         place: "Soma",
         discribe:
         `orem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -25,7 +25,7 @@ const data = [
     
     {
         img: "./images/serekunda.jpg",
-        country: 'Serekunda - The Gambia',
+        country: 'Kanifing - The Gambia',
         place: "Serekunda",
         discribe:
         `orem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -37,8 +37,19 @@ const data = [
 
     {
         img: "./images/banjul.jpg",
-        country: 'Banjul - The Gambia',
+        country: 'Greater Banjul - The Gambia',
         place: "Banjul",
+        discribe:
+        `orem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Rerum illo, commodi quibusdam non maxime itaque perferendis
+        porro ad doloremque maiores dolorem quidem culpa dolores.
+        At optio deleniti hic ex ducimus.`
+        
+    },
+    {
+        img: "./images/fajara.png",
+        country: 'Kanifing - The Gambia',
+        place: "Fajara",
         discribe:
         `orem ipsum dolor sit amet consectetur, adipisicing elit. 
         Rerum illo, commodi quibusdam non maxime itaque perferendis
@@ -77,6 +88,8 @@ for (let i = 0; i < data.length; i++) {
   ordinalNumber.innerHTML += `<h2>0${i + 1}</h2>`
 }
 
+
+
 introduce.children[0].classList.add("active")
 ordinalNumber.children[0].classList.add("active")
 
@@ -91,15 +104,14 @@ thumbnailListWraapper.innerHTML += `
 
 for (let i = 1; i < data.length; i++) {
     thumbnailListWraapper.innerHTML += `
- <div class="thumbnail zoom" style="--idx: ${i - 1}">
+ <div class="thumbnail" style="--idx: ${i - 1}">
     <img src="${data[i].img}" alt="">
  </div>`;
     
 }
 
-const nextBtn = document.querySelector('.navigation .next-button')
-let currentIndex = 0;
-nextBtn.addEventListener('click', () => {
+function HandleSliderTransition() {
+
   nextBtn.disabled = true;
   let clone = thumbnailListWraapper.children[0].cloneNode(true);
   clone.classList.remove("zoom");
@@ -129,6 +141,13 @@ nextBtn.addEventListener('click', () => {
   introduce.children[currentIndex].classList.add('active');
   ordinalNumber.children[currentIndex].classList.add('active');
   ordinalNumber.children[currentIndex].textContent = `${currentIndex + 1}`;
+return;
 
-})
+}
+
+const nextBtn = document.querySelector('.navigation .next-button')
+let currentIndex = 0;
+nextBtn.addEventListener('click', HandleSliderTransition)
+
+// setInterval(HandleSliderTransition, 3000)
 
