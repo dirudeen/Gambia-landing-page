@@ -2,58 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/landing page/images/flag.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome To The Gambia</title>
-    <script src="main.js" defer></script>
-    <!-- put the flag in the type attribute -->
-    <link rel="shortcut icon" href="favicon.icon" type="image/x-icon" />
-    <!-- StyleSheet -->
+    <title>Welcome to The Gambia</title>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Google font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="introduce">
-          <!-- this is called a template -->
-          <div class="wrapper">
-            <span>
-              <h5 class="country" style="--idx: 0"></h5>
-            </span>
-            <span>
-              <h1 class="place" style="--idx: 1"></h1>
-            </span>
-            <span>
-              <p class="describe" style="--idx: 2"></p>
-            </span>
-            <span>
-              <button class="discover-button" style="--idx: 3">
-                Discover Now
-              </button>
-            </span>
-          </div>
-          <!--  -->
+    <main class="main-container">
+      <section class="text-container"></section>
+
+      <section class="slides-container">
+        <div class="slides">
+          <img src="" alt="" />
         </div>
-        <div class="thumbnail-list">
-          <div class="wrapper">
-            <!-- <div class="thumbnail zoom">
-              <img src="" alt="" />
-            </div> -->
-          </div>
+      </section>
+
+      <section class="navigation">
+        <button class="next"><span class="text">Next</span></button>
+        <div class="line"></div>
+        <div class="ordinal-number">
+          <div class="hidden"></div>
         </div>
-      </div>
-      <div class="navigation">
-        <button class="next-button">Next</button>
-        <span class="line"></span>
-        <span class="ordinal-number"></span>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
