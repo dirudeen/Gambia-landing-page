@@ -8,6 +8,11 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    overflow: hidden;
+}
+
 h1,
 h4,
 h5 {
@@ -18,7 +23,7 @@ body {
     min-width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    
 }
 
 .main-container {
@@ -27,8 +32,9 @@ body {
     height: 100%;
     display: grid;
     background-color: gray;
-    padding: 0.5rem;
+    padding-left: 1rem;
     overflow: hidden;
+    
 }
 
 .main-container .text-container {
@@ -184,9 +190,18 @@ span .discover-now {
     display: grid;
     grid-template-areas: 'first';
     z-index: 20;
-    margin-left: 30%;
-    margin-bottom: 2em;
+    margin-left: 50%;
+    margin-bottom: 8em;
 }
+.slides-container,
+.navigation {
+        margin-bottom: 3.5rem;
+}
+
+.navigation {
+    margin-top: 3.5rem;
+}
+
 
 .slides-container .slides {
     position: absolute;
@@ -297,8 +312,9 @@ span .discover-now {
     }
 
     .navigation {
-        place-self: inherit;
-        margin-top: 60%;
+        place-self: end;
+        position: relative;
+        width: 100%;
     }
 
 
